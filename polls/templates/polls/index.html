@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+{% if latest_question_list %}
+    <ul>
+    <table>
+        {% for question in latest_question_list %}
+            <tr><td>{{ question.date }}</td>
+                <td>{{ question.task}}</td>
+                <td>{{ question.predCat}}</td>
+                <td>{{ question.num }}</td>
+            </tr>
+    {% endfor %}
+
+
+
+    </table>
+
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
